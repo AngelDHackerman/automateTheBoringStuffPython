@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import re
 
+
+
       # ! Matching 0 or 1 times ?
 
 print('\n\t Match 0 or 1 times ?:')
@@ -56,3 +58,21 @@ print(matchObject.group())  # it did match 1 time
 
 matchObject = batRegex.search('The aventures of Batwowowowoman')
 print(matchObject.group())  # it did match more than 1 time.
+
+
+
+print('\n\t Matching an specific number of times {x}:')
+
+      # ! Matching an specific number of times {x}
+
+haRegex = re.compile(r'(Ha){3}')  # ? this will match all the patterns HaHaHa
+matchObject = haRegex.search('He said "HaHaHa"')
+print(matchObject.group())
+
+
+
+
+print('\n\t Matching at least and at most {x,y}:')
+
+      # ! Matching at least and at most {x,y}
+
