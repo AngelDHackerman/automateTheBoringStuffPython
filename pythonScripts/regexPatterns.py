@@ -3,8 +3,8 @@ import re
 
       # ! Matching 0 or 1 times ?
 
-print('\n\t Match 0 or 1 times:')
-batRegex = re.compile(r'Bat(wo)?man')  # ? the ? states that pattern appears 1 or 0 times
+print('\n\t Match 0 or 1 times ?:')
+batRegex = re.compile(r'Bat(wo)?man')  #todo: this is the (wo) group
 
 matchObject = batRegex.search('The aventures of Batman')
 print(matchObject.group())  # in here it appeares 0 times
@@ -27,7 +27,7 @@ print(matchObject.group())
 
 
 
-print('\n\t Matches 0 or more times:')
+print('\n\t Matches 0 or more times *:')
 
       # ! Matching 0 or more times *
 
@@ -43,7 +43,16 @@ print(matchObject.group())  # matches several times.
 
 
 
-print('\n\t Matches 1 or more times')
+print('\n\t Matches 1 or more times +:')
 
       # ! Matching 1 or more times +
 
+batRegex = re.compile(r'Bat(wo)+man')
+matchObject = batRegex.search('The aventures of Batman')
+print(matchObject)  # None, because it did not match at least 1 time.
+
+matchObject = batRegex.search('The aventures of Batwoman')
+print(matchObject.group())  # it did match 1 time
+
+matchObject = batRegex.search('The aventures of Batwowowowoman')
+print(matchObject.group())  # it did match more than 1 time.
