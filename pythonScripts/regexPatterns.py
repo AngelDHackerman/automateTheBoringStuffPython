@@ -76,3 +76,26 @@ print('\n\t Matching at least and at most {x,y}:')
 
       # ! Matching at least and at most {x,y}
 
+haRegex = re.compile(r'(Ha){3,5}')
+matchObject = haRegex.search('he said "HaHaHa"')
+print(matchObject.group())
+
+matchObject = haRegex.search('he said "HaHaHaHa"')
+print(matchObject.group())
+
+matchObject = haRegex.search('he said "HaHaHaHaHa"')
+print(matchObject.group())
+
+
+
+print('\n\t Greedy and NonGreedy match')
+
+      # ! Greedy and NonGreedy match
+
+digitRegex = re.compile(r'(\d){3,7}')  # ? This is a greedy match, this will match the longest possible result
+matchObject = digitRegex.search('1234567890')
+print(matchObject.group())  # this will only print 12345
+
+digitRegex = re.compile(r'(\d){3,5}?')  # ? The ? make it a nongreedy match, this will match the shorest possible resutl
+matchObject = digitRegex.search('1234567890')
+print(matchObject.group())  # this will only print 123
