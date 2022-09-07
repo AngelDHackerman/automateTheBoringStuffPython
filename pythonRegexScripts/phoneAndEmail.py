@@ -18,9 +18,25 @@ phoneRegex = re.compile(r'''
 
 # re.compile(r'((\d\d\d) | (\(\d\d\d\)))?(\s|-)\d\d\d-\d\d\d\d(((ext(\.)?\s)|x)(\d{2,5}))')
 
-# todo: Create a regex for email addresses
-# todo: Get the text off the clipboard 
-# todo: Extract the email/phone from this text
+# * Create a regex for email addresses
+
+emailRegex = re.compile(r'''
+
+[a-zA-Z0-9_.+]+   # name part, the + stands for: all this characters might appear once or more
+@                 # @ symbol
+[a-zA-Z0-9_.+]+   # domain name part 
+
+''', re.VERBOSE)
+
+# * Get the text off the clipboard 
+
+text = paperclip.paste() 
+
+# * Extract the email/phone from this text
+
+extractedPhone = phoneRegex.findall('./text.txt')
+extractedEmail = emailRegex.findall('./text.txt')
+
 # todo: copy the extracted email/phone to the clipboard
 
 
