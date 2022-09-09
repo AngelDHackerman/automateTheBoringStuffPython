@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/home/angel/platziProgramador/AutomantedManualQATest/automateTheBoringStuffPython/debuggingPython/./tracebackPython.py", line 6, in <module>
+    raise Exception('This is the error message')
+Exception: This is the error message
+
+Traceback (most recent call last):
+  File "/home/angel/platziProgramador/AutomantedManualQATest/automateTheBoringStuffPython/debuggingPython/./tracebackPython.py", line 6, in <module>
+    raise Exception('This is the error message')
+Exception: This is the error message
+
+Traceback (most recent call last):
+  File "/home/angel/platziProgramador/AutomantedManualQATest/automateTheBoringStuffPython/debuggingPython/./tracebackPython.py", line 6, in <module>
+    raise Exception('This is the error message')
+Exception: This is the error message
+
+Traceback (most recent call last):
+  File "/home/angel/platziProgramador/AutomantedManualQATest/automateTheBoringStuffPython/debuggingPython/./tracebackPython.py", line 6, in <module>
+    raise Exception('This is the error message')
+Exception: This is the error message
+
+Traceback (most recent call last):
+  File "/home/angel/platziProgramador/AutomantedManualQATest/automateTheBoringStuffPython/debuggingPython/./tracebackPython.py", line 6, in <module>
+    raise Exception('This is the error message')
+Exception: This is the error message
+
