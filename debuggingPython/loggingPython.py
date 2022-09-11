@@ -2,7 +2,8 @@
 
 import logging
 
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')  # ? this is the configuration for the debuging.
+# logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')  # ? this is the configuration for the debuging.
+logging.basicConfig(filename='myProgramLogs.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')  # ? it will print the log messages in a new or selected text file
 # logging.disable(logging.CRITICAL)  # ? this program disable all the logging messages, insted of comment them.
 
 
